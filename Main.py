@@ -1,7 +1,7 @@
 from PyPDF2.utils import readNonWhitespace
 from flask import Flask,jsonify
 from flask import *
-#from werkzeug import secure_filename
+from werkzeug import secure_filename
 from docx import Document
 import pandas as pd
 import string
@@ -19,7 +19,7 @@ from flask_cors import CORS, cross_origin
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '../..')))
 # initializing a variable of Flask
-#app = Flask(__name__)
+
 app = Flask(__name__, static_url_path='',template_folder='templates')
 
 app.config['CORS_HEADERS'] = 'CONTENT-TYPE'
